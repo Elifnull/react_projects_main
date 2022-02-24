@@ -1,7 +1,8 @@
-import React from "react";
+import React, { usestate } from "react";
 
 const PersonCard = (props) => {
     const {firstName, lastName, age, hairColour} = props;
+    lets (name, setname) = usestate();
     return(
         <div className="personDiv">
             <ul className="personCard">
