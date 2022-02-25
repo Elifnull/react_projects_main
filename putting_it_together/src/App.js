@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import Personcard from './components/personcard';
+import Personcard from './components/Personcard';
 
 function App() {
   return (
@@ -9,6 +8,6 @@ function App() {
       <Personcard firstName="Ephraim" lastName="Chvorun" Age = {12} hairColour="Blond"/>
     </div>
   );
-}
+};
 
 export default App;

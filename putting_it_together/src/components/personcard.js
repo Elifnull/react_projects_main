@@ -1,13 +1,13 @@
-import React, { usestate } from "react";
+import React, { useState } from "react";
 
 const Personcard = (props) => {
     const {firstName, lastName, Age, hairColour} = props;
-    const [uAge, setuAge] = usestate(Age);
+    const [uAge, setuAge] = useState(Age);
     const ageClick = () => {
         setuAge( uAge + 1);
     };
-    
-    return
+
+    return(
     <div>
         <h2 className="titleName">{lastName}, {firstName}</h2>
         <p className="titledata">Age: {uAge}</p>
@@ -15,6 +15,7 @@ const Personcard = (props) => {
         <br></br>
         <button onClick={ ageClick } >Birthday button for {firstName}</button>
     </div>
+    );
 };
 
 export default Personcard;
