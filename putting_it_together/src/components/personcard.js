@@ -6,6 +6,7 @@ const Personcard = (props) => {
     const ageClick = () => {
         setuAge( uAge + 1);
     };
+    
     return
     <div>
         <h2 className="titleName">{lastName}, {firstName}</h2>
