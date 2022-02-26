@@ -12,15 +12,15 @@ const UserForm = (props) => {
         // shorthand ES6 syntax for building an object - see notes above
         const newUser = { username, email, password };
         console.log("Welcome", newUser);
-    	setUsername("");
-    	setEmail("");
-    	setPassword("");
+        setUsername("");
+        setEmail("");
+        setPassword("");
     };
     
     return(
-        <form onSubmit={ createUser }>
+        <form onSubmit={ createUser }> 
             <div>
-                <label>Username: <label> 
+                <label>Username: </label> 
                 <input type="text" value={username} onChange={ (e) => setUsername(e.target.value) } />
             </div>
             <div>
