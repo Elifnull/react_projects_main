@@ -7,6 +7,7 @@ const Form = () => {
     const [email,setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passConfirm, setPassConfirm] = useState('');
+    const [error, setError] = useState('');
 
     const createUser = (e) => {
 
@@ -17,6 +18,13 @@ const Form = () => {
         setEmail('');
         setPassword('');
     };
+    const valTitle = (e) => {
+        setFirstName(e.target.value);
+        if(e.target.value.lengt < 2) {
+
+        }
+    };
+
     return(
         <div>
             <form onSubmit={createUser}>
