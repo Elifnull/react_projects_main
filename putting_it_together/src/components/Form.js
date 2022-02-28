@@ -21,7 +21,9 @@ const Form = () => {
     const valTitle = (e) => {
         setFirstName(e.target.value);
         if(e.target.value.lengt < 2) {
-
+            setError("First Name must be 2 or more characters")};
+        setLastName(e.target.value);
+        
         }
     };
 
@@ -31,14 +33,23 @@ const Form = () => {
                 <div>
                     <label>First Name:</label>
                     <input type="text" value={firstName} onChange={ (e) => setFirstName(e.target.value) } />
+                    { firstName.length > 0 && firstName.lenght < 2 ? 
+                        <p>First name should be more than 2 characters</p> :
+                        null}
                 </div>
                 <div>
                     <label>Last Name:</label>
                     <input type="text" value={lastName} onChange={ (e) => setLastName(e.target.value) } />
+                    { lastName.length > 0 && lasttName.lenght < 2 ? 
+                        <p>Last name should be more than 2 characters</p> :
+                        null}
                 </div>
                 <div>
                     <label>Email:</label>
                     <input type="email" value={email} onChange={ (e) => setEmail(e.target.value) } />
+                    { lastName.length > 0 && lasttName.lenght < 2 ? 
+                        <p>Last name should be more than 2 characters</p> :
+                        null}
                 </div>
                 <div>
                     <label>Password:</label>
@@ -59,6 +70,6 @@ const Form = () => {
             </list>
         </div>
     );
-};
+
 
 export default Form;
