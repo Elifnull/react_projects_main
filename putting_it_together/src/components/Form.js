@@ -25,29 +25,27 @@ const Form = () => {
         setLastName(e.target.value);
         
         }
-    };
-
     return(
         <div>
             <form onSubmit={createUser}>
                 <div>
                     <label>First Name:</label>
                     <input type="text" value={firstName} onChange={ (e) => setFirstName(e.target.value) } />
-                    { firstName.length > 0 && firstName.lenght < 2 ? 
+                    { firstName.length > 0 && firstName.length < 2 ? 
                         <p>First name should be more than 2 characters</p> :
                         null}
                 </div>
                 <div>
                     <label>Last Name:</label>
                     <input type="text" value={lastName} onChange={ (e) => setLastName(e.target.value) } />
-                    { lastName.length > 0 && lasttName.lenght < 2 ? 
+                    { lastName.length > 0 && lastName.length < 2 ? 
                         <p>Last name should be more than 2 characters</p> :
                         null}
                 </div>
                 <div>
                     <label>Email:</label>
                     <input type="email" value={email} onChange={ (e) => setEmail(e.target.value) } />
-                    { email.length > 0 && email.lenght < 5 ? 
+                    { email.length > 0 && email.length < 5 ? 
                         <p>email should be 5 characters at least</p> :
                         null}
                 </div>
@@ -73,6 +71,6 @@ const Form = () => {
             </list>
         </div>
     );
-
+};
 
 export default Form;
