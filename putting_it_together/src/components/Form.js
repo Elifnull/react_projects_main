@@ -47,8 +47,8 @@ const Form = () => {
                 <div>
                     <label>Email:</label>
                     <input type="email" value={email} onChange={ (e) => setEmail(e.target.value) } />
-                    { lastName.length > 0 && lasttName.lenght < 2 ? 
-                        <p>Last name should be more than 2 characters</p> :
+                    { email.length > 0 && email.lenght < 5 ? 
+                        <p>email should be 5 characters at least</p> :
                         null}
                 </div>
                 <div>
@@ -58,6 +58,9 @@ const Form = () => {
                 <div>
                     <label>Confirm Password:</label>
                     <input type="password" value={passConfirm} onChange={ (e) => setPassConfirm(e.target.value) } />
+                    { password !== passConfirm ? 
+                        <p>passwords do not match</p> :
+                        null}
                 </div>
             </form>
             <list>
