@@ -6,20 +6,19 @@ const ColourForm = (props) =>{
     const submitColour = (event) => {
         event.preventDefault();
         
-
     };
 
     return(
         <div>
-            <Form onSubmit = {submitColour}>
+            <forum onSubmit = {submitColour}>
                 <div>
-                    <label htmlfor="colour">Colour</label>
+                    <br/>
+                    <br/>
+                    <label htmlfor="colour">Colour: </label>
                     <input type="text" name="colour" onChange={(e) => setBoxColour(e.target.value)}/>
+                    <button>Create</button>
                 </div>
-                <div>
-                    <button type=""
-                </div>
-            </Form>
+            </forum>
         </div>
     );
 };
