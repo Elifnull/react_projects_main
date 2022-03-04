@@ -1,16 +1,16 @@
 import './App.css';
 import React, {useState} from 'react';
-import ColourForm from './components/ColourForm';
+import Form from './components/Form';
 import Box from './components/Box';
 
 function App() {
-  const [ objectColour, setObjectColour ] = useState([]);
+  const [ objectColourList, setObjectColourList ] = useState([]);
 
   return(
     <div className="App">
         <h2>Colour Box Generator</h2>
-        <ColourForm objectColour={ objectColour } setObjectColour={ setObjectColour }/>
-        <Box objectColour={objectColour} setObjectColour={setObjectColour}/>
+        <Form colour={ objectColourList } setColour={ setObjectColourList } />
+        <Box colour={ objectColourList } />
     </div>
   );
 }
