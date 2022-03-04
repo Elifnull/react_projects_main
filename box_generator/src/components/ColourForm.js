@@ -6,6 +6,7 @@ const ColourForm = (props) =>{
     const submitColour = (event) => {
         event.preventDefault();
         
+        setObjectColour([...objectColour, boxColour]);
     };
 
     return(
