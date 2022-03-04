@@ -4,11 +4,11 @@ import ColourBox from './components/ColourBox';
 import { useState } from "react";
 
 function App() {
-  const [] = useState('');
+  const [objectColour,setObjectColour] = useState([]);
 
   return (
     <div className="App">
-      <ColourForm/>
+      <ColourForm objectColour={objectColour} setObjectColour={setObjectColour}/>
       <ColourBox/>
       
     </div>

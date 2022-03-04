@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const ColourForm = (props) =>{
-    const {boxColourObj, setBoxColourObj} = props;
+    const {objectColour, setObjectColour} = props;
     const [boxColour, setBoxColour] = useState('');
     const submitColour = (event) => {
         event.preventDefault();
@@ -16,7 +16,7 @@ const ColourForm = (props) =>{
                     <br/>
                     <label htmlfor="colour">Colour: </label>
                     <input type="text" name="colour" onChange={(e) => setBoxColour(e.target.value)}/>
-                    <button>Create</button>
+                    <button type="submit"> Create</button>
                 </div>
             </forum>
         </div>
