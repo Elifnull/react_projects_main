@@ -1,28 +1,31 @@
 import React, { useState } from "react";
 
 const ColourForm = (props) =>{
-    const {objectColour, setObjectColour} = props;
-    const [boxColour, setBoxColour] = useState('');
-    const submitColour = (event) => {
-        event.preventDefault();
+    const { objectColour, setObjectColour } = props;
+    const [colour, setColour] = useState("");
+
+    const submitColour = (e) => {
+        e.preventDefault();
         
-        setObjectColour([...objectColour, boxColour]);
-    };
+        setObjectColour( [ ...objectColour, colour] );
+    }
 
     return(
         <div>
-            <forum onSubmit = {submitColour}>
+            <forum onSubmit = { submitColour } style={{margin: "25px"}}>
                 <div>
-                    <br/>
-                    <br/>
                     <label htmlfor="colour">Colour: </label>
-                    <input type="text" name="colour" onChange={(e) => setBoxColour(e.target.value)}/>
-                    <button type="submit"> Create</button>
+                    <input 
+                        type="text" 
+                        name="color"
+                        onChange={ (e) => (setColour(e.target.value)) }
+                    />
+                    <button style={{margin: "10px"}}>Create Colour</button>
                 </div>
             </forum>
         </div>
     );
-};
+}
 
 
 export default ColourForm;
