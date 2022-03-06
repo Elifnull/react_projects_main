@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from ".components/Header";
+import Header from "./components/Header";
+import Nav from './components/Nav';
+import Main from './components/Main';
+import Sub from './components/Sub';
+import Advert from './components/Advert';
 
 function App() {
   return (
@@ -11,7 +15,6 @@ function App() {
         <Sub/>
         <Sub/>
         <Sub/>
-        <Advert/>
       </Main>
     </div>
   );
