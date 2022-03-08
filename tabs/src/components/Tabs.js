@@ -1,13 +1,16 @@
 import React from "react";
 
 const Tabs = (props) => {
+    const {tabArray, activeTab, setActiveTab } = props;
 
 
 
 
     return(
         <div>
-            <button>Tab</button> 
+            {tabArray.map((value, index) =>(
+            <p>{value.name}</p> 
+            ))}
         </div>
     );
 }

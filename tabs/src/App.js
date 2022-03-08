@@ -4,7 +4,7 @@ import { useState} from "react";
 import './App.css';
 
 function App() {
-  const {tab1, tab2, tab3} = tablist([
+  const tabArray = ([
     {name: "Tab 1", content: "This is Tab 1", colour: "Black"},
     {name: "Tab 2", content: "This is Tab 2", colour: "Black"},
     {name: "Tab 3", content: "This is Tab 3", colour: "Black"}
@@ -14,7 +14,7 @@ function App() {
   
   return (
     <div className="App">
-      <Tabs/>
+      <Tabs tabArray = {tabArray} activeTab = {activeTab} setActiveTab = {setActiveTab}/>
       <Display/>
     </div>
   );
