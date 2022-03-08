@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Tabs tabArray = {tabArray} activeTab = {activeTab} setActiveTab = {setActiveTab}/>
-      <Display/>
+      <Display displayContent={tabArray[activeTab].content}/>
     </div>
   );
 }

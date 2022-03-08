@@ -1,13 +1,13 @@
 import React from "react";
 
 const Display = (props) => {
-
+    const {displayContent} = props;
 
 
 
     return(
         <div>
-            Display
+            {displayContent}
         </div>
     );
 }
