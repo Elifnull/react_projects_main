@@ -12,6 +12,16 @@ const View = (props) => {
         return setTodoList(todoList.filter((value,index) => value.id !== todoId))
     };
 
+    const completedTodo = (value) => {
+        value.complete = !value.complete
+        setTodoList([...todoList])
+    };
+    const completeTodoDec = (value) => {
+        if (value.complete){
+            return "line-through"
+        }
+    }
+
     return(
         <div>
             {todoList.map((value, index)=>{
@@ -19,12 +29,16 @@ const View = (props) => {
                     <div key={index} style={{
                         backgroundColor: colourfundtion(index),
                         color: "black",
+                        textDecoration: completeTodoDec(value),
                         width: "24%",
                         marginTop: "1%",
                         justifyContent: "space-between",
-                        paddingLeft: "1%"
-                    }} ><h2 style={{text: "center"}}>{value.text}</h2>
-                    <button onClick={()=> deleteTodo(value.id)}>delete</button>
+                        paddingLeft: "1%",
+
+                    }} ><h2 style={{ }}>{value.text}</h2>
+                    <input type="checkbox" onClick={()=> completedTodo(value)}></input>
+                    <button onClick={() => deleteTodo(value.id)}>delete</button>
+
                     </div>
                 )
             })}

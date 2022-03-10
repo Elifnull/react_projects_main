@@ -10,7 +10,8 @@ const Todo = (props) => {
         e.preventDefault();
         setTodoList([...todoList, {
             text: todoItem, 
-            id: Math.floor(Math.random()*10000).toString() 
+            id: Math.floor(Math.random()*10000).toString(),
+            complete: false
         }]);
         setTodoItem("");
     };
