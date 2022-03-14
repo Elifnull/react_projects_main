@@ -6,7 +6,7 @@ const Todo = (props) => {
     const { todoList, setTodoList } = props;
     const [todoItem, setTodoItem] = useState('');
 
-    const handelSubmit = (e) =>{
+    const handelSubmit = (e) => {
         e.preventDefault();
         setTodoList([...todoList, {
             text: todoItem, 

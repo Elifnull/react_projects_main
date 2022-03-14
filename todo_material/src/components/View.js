@@ -20,11 +20,11 @@ const View = (props) => {
         if (value.complete){
             return "line-through"
         }
-    }
+    };
 
     return(
         <div>
-            {todoList.map((value, index)=>{
+            {todoList.map((value, index) => {
                 return(
                     <div key={index} style={{
                         backgroundColor: colourfundtion(index),
